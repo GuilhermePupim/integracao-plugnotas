@@ -2,15 +2,15 @@
   "name": "integracao-plugnotas",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node src/app.js",
-    "consumer": "node src/consumer/consumer.js"
-  },
+"scripts": {
+  "dev": "nodemon src/app.js",
+  "start": "concurrently \"npm run start-main\" \"npm run start-consumer\"",
+  "start-main": "node src/app.js",
+  "start-consumer": "node src/consumer/consumer.js"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@aws-sdk/client-sqs": "^3.782.0",
     "aws-sdk": "^2.1692.0",
@@ -20,6 +20,16 @@
     "mongoose": "^8.13.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
-  }
+    "nodemon": "^3.1.9",
+    "concurrently": "^7.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GuilhermePupim/integracao-plugnotas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GuilhermePupim/integracao-plugnotas/issues"
+  },
+  "homepage": "https://github.com/GuilhermePupim/integracao-plugnotas#readme",
+  "description": ""
 }
