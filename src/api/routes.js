@@ -3,7 +3,6 @@ const router = express.Router();
 const CepEntry = require('../models/CepEntry');
 const { sendToQueue } = require('../services/sqsService');
 
-// (aceita 87020-025 ou 87020025)
 const isValidCep = (cep) => {
   const cepRegex = /^\d{5}-?\d{3}$/;
   return cepRegex.test(cep);
