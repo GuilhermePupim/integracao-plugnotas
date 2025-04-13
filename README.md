@@ -1,6 +1,6 @@
 # Integração PlugNotas
 
-Projeto para integração de novos colaboradores da equipe PlugNotas.
+Aplicação feita em Node.js que consome a API do ViaCEP e salva os dados em um banco de dados MongoDB, utilizando AWS SQS para integração entre uma API produtora e um consumidor
 
 ## Objetivo
 
