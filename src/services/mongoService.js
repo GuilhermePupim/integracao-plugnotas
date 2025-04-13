@@ -1,6 +1,6 @@
 const CepEntry = require('../models/CepEntry');
 
-// Função para encontrar o CEP pelo ID
+
 async function findCepById(id) {
   try {
     const entry = await CepEntry.findById(id);
@@ -14,11 +14,11 @@ async function findCepById(id) {
   }
 }
 
-// Função para atualizar o registro do CEP
+
 async function updateCepData(id, status, data = null) {
   const updateData = { status };
 
-  // Se houver dados do CEP, adiciona ao campo 'data'
+  
   if (data) {
     updateData.data = data;
   }
